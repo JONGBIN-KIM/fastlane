@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/member")
 public class MemberController {
@@ -22,7 +24,7 @@ public class MemberController {
     private static final Gson gson = new Gson();
 
     @PostMapping("/signUp")
-    public ResponseEntity signUp(MemberVo memVo) throws FastlaneException {
+    public ResponseEntity signUp(@Valid MemberVo memVo) throws FastlaneException {
         memberService.signUp(memVo);
 
         return ResponseEntity
@@ -34,7 +36,7 @@ public class MemberController {
     }
 
     @PutMapping("/changePasswd")
-    public ResponseEntity changePasswd(ChangeMemberInfoVo chgMemInfoVo) throws FastlaneException {
+    public ResponseEntity changePasswd(@Valid ChangeMemberInfoVo chgMemInfoVo) throws FastlaneException {
         memberService.changePasswd(chgMemInfoVo);
 
         return ResponseEntity
@@ -46,7 +48,7 @@ public class MemberController {
     }
 
     @DeleteMapping("/deleteMember")
-    public ResponseEntity deleteMember(MemberVo memVo) throws FastlaneException {
+    public ResponseEntity deleteMember(@Valid MemberVo memVo) throws FastlaneException {
         memberService.deleteMember(memVo);
 
         return ResponseEntity
