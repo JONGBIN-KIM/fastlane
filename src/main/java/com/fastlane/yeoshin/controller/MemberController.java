@@ -1,6 +1,5 @@
-package com.fastlane.yeoshin.controller.member;
+package com.fastlane.yeoshin.controller;
 
-import com.fastlane.yeoshin.common.entity.FastlaneExceptionEntity;
 import com.fastlane.yeoshin.common.entity.FastlaneResponseEntity;
 import com.fastlane.yeoshin.common.enumtype.MemberConstants;
 import com.fastlane.yeoshin.common.exception.FastlaneException;

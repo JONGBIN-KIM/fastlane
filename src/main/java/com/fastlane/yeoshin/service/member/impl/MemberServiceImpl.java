@@ -1,4 +1,4 @@
-package com.fastlane.yeoshin.service.impl;
+package com.fastlane.yeoshin.service.member.impl;
 
 import com.fastlane.yeoshin.common.enumtype.MemberError;
 import com.fastlane.yeoshin.entity.MemberEntity;
@@ -8,10 +8,7 @@ import com.fastlane.yeoshin.service.MemberService;
 import com.fastlane.yeoshin.vo.ChangeMemberInfoVo;
 import com.fastlane.yeoshin.vo.MemberVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-
-import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
 @Service
 public class MemberServiceImpl implements MemberService {
